@@ -44,10 +44,15 @@ def add_documents(documents_with_metadata):
 #     ids = [str(i) for i in range(len(docs))]
 #     collection.add(documents=docs, metadatas=metadatas, embeddings=embeddings, ids=ids)
 
+# def search(query: str, top_k=3):
+#     from .embedder import get_embedding
+#     embedder = INSTRUCTOR("hkunlp/instructor-base")
+#     embedding = embedder.encode([[ "Represent the news query for retrieval:", query ]])[0]
+#     # embedding = get_embedding(query)
+#     results = collection.query(query_embeddings=[embedding], n_results=top_k)
+#     return results["documents"][0]
 def search(query: str, top_k=3):
     from .embedder import get_embedding
-    embedder = INSTRUCTOR("hkunlp/instructor-base")
-    embedding = embedder.encode([[ "Represent the news query for retrieval:", query ]])[0]
-    # embedding = get_embedding(query)
+    embedding = get_embedding(query)
     results = collection.query(query_embeddings=[embedding], n_results=top_k)
     return results["documents"][0]
