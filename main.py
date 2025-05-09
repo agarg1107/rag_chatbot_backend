@@ -85,3 +85,6 @@ def reset(session_id: str):
 @app.get("/session")
 def new_session():
     return {"session_id": str(uuid.uuid4())}
+@app.get("/ping")
+def ping():
+    return {"status": "ok"}
