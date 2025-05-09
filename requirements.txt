@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+chromadb
+redis
+httpx
+uuid
+jinja2
+pydantic
+python-dotenv
+feedparser
+beautifulsoup4
+InstructorEmbedding==1.0.1
+sentence-transformers==2.2.2
+huggingface_hub==0.16.4
+transformers==4.30.2

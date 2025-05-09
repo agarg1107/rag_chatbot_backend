@@ -1,0 +1,20 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Virtual environments
+venv/
+venv310/
+
+# ChromaDB local store
+chroma_store/
+
+# VSCode settings
+.vscode/
+
+# System files
+.DS_Store
